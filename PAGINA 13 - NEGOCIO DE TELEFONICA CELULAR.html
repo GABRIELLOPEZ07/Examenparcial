@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compañía Telefónica</title>
+  <style>
+    body {
+      background-color: #4cc1d3;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-table {
+      width: 100%;
+      background-color: #f45579;
+      padding: 10px;
+      border-collapse: collapse;
+    }
+
+    .logo-cell img {
+      width: 200px;
+    }
+
+    .title-cell {
+      color: red;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      color: blue;
+      font-size: 24px;
+    }
+
+    .marquee-cell {
+      width: 200px;
+    }
+
+    .marquee-box {
+      background-color: #346eea;
+      color: white;
+      padding: 10px;
+    }
+
+    .main-form {
+      width: 100%;
+      border: 3px solid #000;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    .form-accesorios {
+      width: 33%;
+      vertical-align: top;
+      padding: 15px;
+    }
+
+    .section-title {
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    select, input[type="text"], input[type="email"] {
+      width: 90%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    hr {
+      border: 1px solid #999;
+      margin: 15px 0;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .submit-button input {
+      background-color: #f45579;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-button input:hover {
+      background-color: #e23e60;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <table class="header-table">
+    <tr>
+      <td class="logo-cell">
+        <img src="" alt="Logo">
+      </td>
+      <td>
+        <div class="title-cell">CELULAR CENTER</div>
+        <hr>
+        <div class="subtitle">Venta, mantenimiento, reparación, refacciones</div>
+      </td>
+      <td class="marquee-cell">
+        <marquee direction="up" class="marquee-box">
+          SAMSUNG<br>
+          MOTOROLA<br>
+          ALCATEL<br>
+          IPHONE<br>
+          NOKIA<br>
+          SONY
+        </marquee>
+      </td>
+    </tr>
+  </table>
+
+  
+  <form>
+    <table class="main-form">
+      <tr>
+        
+        <td class="form-section">
+          <span class="section-title">TIPOS</span>
+          <div class="input-group"><input type="radio" name="tipo"> Solo Teléfono</div>
+          <div class="input-group"><input type="radio" name="tipo"> Teléfono + MP3</div>
+          <div class="input-group"><input type="radio" name="tipo"> Teléfono + MP3 + Cámara</div>
+          <div class="input-group"><input type="radio" name="tipo"> Teléfono + MP3 + Cámara + WiFi</div>
+          <div class="input-group"><input type="radio" name="tipo"> Smartphone</div>
+
+          <hr>
+          <span class="section-title">MARCA</span>
+          <div class="input-group">
+            <select name="marca">
+              <option>SAMSUNG</option>
+              <option>LG</option>
+              <option>NOKIA</option>
+              <option>ALCATEL</option>
+              <option>IPHONE</option>
+              <option>SONY</option>
+            </select>
+          </div>
+        </td>
+
+       
+        <td class="form-accesorios">
+          <span class="section-title">ACCESORIOS</span>
+          <div class="input-group"><input type="checkbox" name="acc1"> Audífonos</div>
+          <div class="input-group"><input type="checkbox" name="acc2"> Manos Libres</div>
+          <div class="input-group"><input type="checkbox" name="acc3"> Cable USB</div>
+          <div class="input-group"><input type="checkbox" name="acc4"> Cargador</div>
+          <div class="input-group"><input type="checkbox" name="acc5"> Carátula/Mica</div>
+          <div class="input-group"><input type="checkbox" name="acc6"> Pila</div>
+          <div class="input-group"><input type="checkbox" name="acc7"> Clips</div>
+          <div class="input-group"><input type="checkbox" name="acc8"> Memoria SD</div>
+          <div class="input-group"><input type="checkbox" name="acc9"> Memoria USB</div>
+
+          <hr>
+          <span class="section-title">PLAN</span>
+          <div class="input-group">
+            <select name="plan">
+              <option>Prepago</option>
+              <option>Postpago</option>
+              <option>Mixto</option>
+            </select>
+          </div>
+        </td>
+
+        
+        <td class="form-cliente">
+          <span class="section-title">CLIENTE</span>
+          <div class="input-group">
+            Nombre: <br>
+            <input type="text" name="nombre">
+          </div>
+          <div class="input-group">
+            Dirección: <br>
+            <input type="text" name="direccion">
+          </div>
+          <div class="input-group">
+            Teléfono: <br>
+            <input type="text" name="telefono">
+          </div>
+          <div class="input-group">
+            E-mail: <br>
+            <input type="email" name="email">
+          </div>
+
+          <hr>
+          <span class="section-title">MONEDA</span>
+          <div class="input-group">
+            <select name="moneda">
+              <option>Pesos</option>
+              <option>Dólares</option>
+              <option>Euros</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    
+    <div class="submit-button">
+      <input type="submit" value="Cotizar">
+    </div>
+  </form>
+
+</body>
+</html>
+

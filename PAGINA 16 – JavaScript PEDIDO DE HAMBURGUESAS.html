@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Pagina -- Negocio de Hamburguesas </title>
+
+<script language="javascript">
+function envdat()
+{
+
+if(NegHam.tipham[0].checked==true) {A=50;} else {A=0;}
+if(NegHam.tipham[1].checked==true) {B=70;} else {B=0;}
+if(NegHam.tipham[2].checked==true) {C=90;} else {C=0;}
+if(NegHam.tipham[3].checked==true) {D=120;} else {D=0;}
+if(NegHam.tipham[4].checked==true) {E=50;} else {E=0;}
+TA=A+B+C+D+E;
+
+if(NegHam.tipcar[0].checked==true) {F=0;} else {F=0;}
+if(NegHam.tipcar[1].checked==true) {G=15;} else {G=0;}
+if(NegHam.tipcar[2].checked==true) {H=5;} else {H=0;}
+if(NegHam.tipcar[3].checked==true) {I=10;} else {I=0;}
+TB=F+G+H+I;
+
+if(NegHam.Ingham1.checked==true) {J=0;} else {J=0;}
+if(NegHam.Ingham2.checked==true) {K=5;} else {K=0;}
+if(NegHam.Ingham3.checked==true) {L=3;} else {L=0;}
+if(NegHam.Ingham4.checked==true) {M=5;} else {M=0;}
+if(NegHam.Ingham5.checked==true) {N=5;} else {N=0;}
+if(NegHam.Ingham6.checked==true) {O=3;} else {O=0;}
+if(NegHam.Ingham7.checked==true) {P=3;} else {P=0;}
+if(NegHam.Ingham8.checked==true) {Q=2;} else {Q=0;}
+TC=J+K+L+M+N+O+P+Q;
+
+R=parseInt(NegHam.canham.value);
+
+X=(TA+TB+TC)*R;
+
+if(NegHam.tipcon.value==0) {TOT=X;}
+if(NegHam.tipcon.value==40) {TOT=X+40;}
+if(NegHam.tipcon.value==.15) {TOT=X*1.15; }
+if(NegHam.tipcon.value==.25) {TOT=X*1.25; }
+
+
+
+NegHam.totpag.value=TOT;
+}
+
+function imptic()
+{
+alert("TICKET IMPRESO CON EXITO!!");
+}
+
+
+
+</script>
+
+</head>
+<body bgcolor="orange">
+<center>
+<br>
+<hr color="black" size="5">
+<h1> 🍔HAMBURGUESAS🍔</h1>
+<hr color="black" size="5">
+
+<form name="NegHam">
+<table width="85%" border="1">
+<tr>
+<td width="33%">
+<h3> TIPO DE HAMBURGUESA </h3>
+<hr>
+<input type="radio" name="tipham" onclick="envdat();"> Sencilla 50.00<br>
+<input type="radio" name="tipham"  onclick="envdat();"> Especial 70.00<br>
+<input type="radio" name="tipham"  onclick="envdat();"> Doble 90.00<br>
+<input type="radio" name="tipham"  onclick="envdat();"> Suprema 120.00<br>
+<input type="radio" name="tipham"  onclick="envdat();"> Light 55.00<br>
+<h3> TIPO DE CARNE </h3>
+<hr>
+<input type="radio" name="tipcar"  onclick="envdat();"> Tradicional +0.00<br>
+<input type="radio" name="tipcar"  onclick="envdat();"> Angus +15.00<br>
+<input type="radio" name="tipcar"  onclick="envdat();"> Pollo +5.00<br>
+<input type="radio" name="tipcar"  onclick="envdat();"> RoofBeef +10.00<br>
+ </td>
+<td width="33%">
+<h3> INGREDIENTES </h3>
+<hr>
+<input type="checkbox" name="Ingham1"  onclick="envdat();"> Tomate y Cebolla +0.00<br>
+<input type="checkbox" name="Ingham2"  onclick="envdat();"> Aguacate +5.00<br>
+<input type="checkbox" name="Ingham3"  onclick="envdat();"> Tocino +3.00<br>
+<input type="checkbox" name="Ingham4"  onclick="envdat();"> Salchicha Asadera +5.00<br>
+<input type="checkbox" name="Ingham5"  onclick="envdat();"> Carne Trompo +5.00<br>
+<input type="checkbox" name="Ingham6"  onclick="envdat();"> Piña +3.00<br>
+<input type="checkbox" name="Ingham7"  onclick="envdat();"> Peperoni +3.00<br>
+<input type="checkbox" name="Ingham8"  onclick="envdat();"> Champiñones +2.00<br>
+ </td>
+<td width="33%">
+<h3> NUMERO DE HAMBURGUESAS </h3>
+<hr>
+Cantidad de Hamburguesas: <input type="text" name="canham" size="2"  onchange="envdat();" value=1>
+<h3> DATOS DEL CLIENTE </h3>
+<hr>
+Nombre: <input type="text" name="nomcli" size="15"> <br>
+Direccion: <input type="text" name="dircli" size="18"> <br>
+Telefono: <input type="text" name="telcli" size="10"> <br>
+<h3> TIPO DE SERVICIO/CONSUMO </h3>
+<hr>
+<select name="tipcon" onchange="envdat();">
+<option value=0>Para llevar +0.00</option>
+<option value=.15>Comer aqui +15%</option>
+<option value=40>Entrega a Domicilio +40.00</option>
+<option value=.25>Plataforma Digital +25%</option>
+</select>
+ </td>
+</tr>
+</table>
+<br>
+TOTAL A PAGAR: <input type="text" name="totpag" value=0>
+<br><br>
+<input type="button" value="IMPRIMIR TICKET" onclick="imptic();">
+</form>
+
+</center>
+</body>
+</html>
+
